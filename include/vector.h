@@ -112,9 +112,9 @@ namespace laba3 {
 	inline void vector<T>::push_back(T k) {
 		if (this->size == this->capacity) {
 			resize(this->size + 1);
-			this->data[this->size] = k;
-			this->capacity = this->size + 1;
-			this->size = this->size + 1;
+			this->data[this->size - 1] = k;
+			//this->capacity = this->size + 1;
+			//this->size = this->size + 1;
 		}
 		else {
 			this->size++;
@@ -124,7 +124,7 @@ namespace laba3 {
 
 	template<class T>
 	inline T vector<T>::pop_back() {
-		T tmp = this->data[this->size];
+		T tmp = this->data[this->size - 1];
 		this->size--;
 
 		return tmp;
