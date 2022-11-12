@@ -20,6 +20,7 @@ namespace laba3 {
 		T operator[](int i) const;
 		T& operator[](int i);
 		vector<T>& operator+=(const vector<T>& v);
+		int sz() { return size; };
 
 		template <class V>
 		friend std::ostream& operator<<(std::ostream& obj, const vector<V>& v);

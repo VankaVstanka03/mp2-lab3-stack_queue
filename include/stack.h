@@ -6,10 +6,9 @@ private:
 	laba3::vector<T> data;
 	size_t size;
 public:
-	stack(): size(0), data(0) {};
+	stack(): data(0), size(0) {};
 
-	stack(T val):data(1) {
-		size = 1;
+	stack(T val):data(1), size(1) {
 		data[0] = val;
 	};
 
