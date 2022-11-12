@@ -1,4 +1,4 @@
-#include <vcruntime.h>
+
 
 template<class T>
 class queue {
@@ -56,7 +56,7 @@ public:
 		if (size_of_queue == 0)
 			throw std::out_of_range("Trying pop empty stack");
 		else {
-			data[start % size_of_data] = NULL;
+			data[start % size_of_data] = 0;
 			size_of_queue--;
 			start++;
 		}
