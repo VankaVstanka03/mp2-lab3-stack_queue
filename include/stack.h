@@ -23,14 +23,14 @@ public:
 
 	void pop() {
 		if (size == 0)
-			throw std::exception("Empty stack doesn't have elements");
+			throw std::out_of_range("Empty stack doesn't have elements");
 		size--;
 		data.pop_back();
 	};
 
 	T top() {
 		if (size == 0)
-			throw std::exception("Empty stack doesn't have elements");
+			throw std::out_of_range("Empty stack doesn't have elements");
 		return data[size - 1];
 	};
 
